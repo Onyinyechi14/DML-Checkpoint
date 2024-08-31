@@ -1,0 +1,26 @@
+Table Structure (Based on provided images):
+Customers table:
+
+CustCode (Primary Key)
+custName
+custAdress
+custTel
+Orders table:
+
+OrderCode (Primary Key)
+OrderDate
+CustCode (Foreign Key referencing CustCode in Customers)
+
+
+Customers Table:
+INSERT INTO Customers (CustCode, custName, custAdress, custTel) VALUES
+(1, 'John Doe', '123 Elm Street', '555-1234'),
+(2, 'Jane Smith', '456 Oak Avenue', '555-5678'),
+(3, 'Alice Johnson', '789 Pine Road', '555-8765');
+
+
+Orders Table:
+INSERT INTO Orders (OrderCode, OrderDate, CustCode) VALUES
+(101, TO_DATE('2024-08-31', 'YYYY-MM-DD'), 1),
+(102, TO_DATE('2024-08-30', 'YYYY-MM-DD'), 2),
+(103, TO_DATE('2024-08-29', 'YYYY-MM-DD'), 3);
